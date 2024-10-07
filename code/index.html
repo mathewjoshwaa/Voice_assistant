@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Orrery Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Orrery Web App</h1>
+        <p>Welcome to the Interactive Orrery Web App, where you can explore the solar system in 3D! Discover planets, asteroids, comets, and more celestial bodies. Learn about Potentially Hazardous Asteroids (PHAs) and Near-Earth Objects (NEOs) as you interact with the virtual solar system.</p>
+    </header>
+
+    
+    <div id="main-content">
+        
+        <nav id="sidebar">
+            <h2>Explore the Solar System</h2>
+            <ul>
+                <li><a href="#planets">Planets</a></li>
+                <li><a href="#asteroids">Asteroids</a></li>
+                <li><a href="#comets">Comets</a></li>
+                <li><a href="#pha">Potentially Hazardous Asteroids</a></li>
+            </ul>
+        </nav>
+
+        
+        <section id="solar-system">
+            <canvas id="orreryCanvas"></canvas>
+        </section>
+
+        
+        <div id="modal-container">
+        
+            <div id="planetModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closePlanetModal">&times;</span>
+                    <h2>Planet Details</h2>
+                    <p id="planetInfo">Click on any planet in the orrery to see detailed information here.</p>
+                </div>
+            </div>
+
+            
+            <div id="asteroidModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeAsteroidModal">&times;</span>
+                    <h2>Asteroid Details</h2>
+                    <p id="asteroidInfo">Learn about asteroids and their orbits. Click on any asteroid to see more.</p>
+                </div>
+            </div>
+          
+            <div id="cometModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeCometModal">&times;</span>
+                    <h2>Comet Details</h2>
+                    <p id="cometInfo">Explore comets in our solar system. Click on any comet to learn more.</p>
+                </div>
+            </div>
+
+            
+            <div id="phaModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closePhaModal">&times;</span>
+                    <h2>Potentially Hazardous Asteroid Details</h2>
+                    <p id="phaInfo">PHAs pose a potential threat to Earth. Click on them in the orrery to see more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <section id="controls">
+        <h2>Control the Orrery</h2>
+        <p>Use the buttons below to zoom, rotate, and interact with the solar system:</p>
+        <button onclick="zoomIn()">Zoom In</button>
+        <button onclick="zoomOut()">Zoom Out</button>
+        <button onclick="rotateLeft()">Rotate Left</button>
+        <button onclick="rotateRight()">Rotate Right</button>
+        <button onclick="resetView()">Reset View</button>
+    </section>
+    <footer>
+        <p>Interactive Orrery Web App &copy; 2024. Developed to visualize the solar system and provide educational insights into celestial bodies, Near-Earth Objects (NEOs), and Potentially Hazardous Asteroids (PHAs).</p>
+        <p>Contact us: <a href="mailto:support@orrerywebapp.com">support@orrerywebapp.com</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
